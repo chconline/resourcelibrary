@@ -24,15 +24,15 @@ if( !defined( 'ABSPATH' ) ) {
 
  * @package        Responsive
 
- * @author         Emil Uzelac
+ * @author         Gerard Greenidge
 
- * @copyright      2003 - 2014 CyberChimps
+ * @copyright      2014 - 2019 CyberChimps
 
  * @license        license.txt
 
  * @version        Release: 1.3
 
- * @filesource     wp-content/themes/responsive/header.php
+ * @filesource     wp-content/themes/responsive-child/header.php
 
  * @link           http://codex.wordpress.org/Theme_Development#Document_Head_.28header.php.29
 
@@ -65,35 +65,31 @@ if( !defined( 'ABSPATH' ) ) {
 <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 
 	<head>
-
-
-
 		<meta charset="<?php bloginfo( 'charset' ); ?>"/>
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-		<title><?php wp_title( '&#124;', true, 'right' ); ?></title>
-
-
-
 		<link rel="profile" href="http://gmpg.org/xfn/11"/>
-
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-18813551-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<?php wp_head(); ?>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '138096150009706'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=138096150009706&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
 <!-- Start Alexa Certify Javascript -->
 <script type="text/javascript">
 _atrk_opts = { atrk_acct:"o2zxr1DTcA20Ug", domain:"chconline.org",dynamic: true};
@@ -102,9 +98,6 @@ _atrk_opts = { atrk_acct:"o2zxr1DTcA20Ug", domain:"chconline.org",dynamic: true}
 <noscript><img src="https://certify.alexametrics.com/atrk.gif?account=o2zxr1DTcA20Ug" style="display:none" height="1" width="1" alt="" /></noscript>
 <!-- End Alexa Certify Javascript -->
 	</head>
-
-
-
 <body <?php body_class(); ?>>
 
 
@@ -123,9 +116,12 @@ _atrk_opts = { atrk_acct:"o2zxr1DTcA20Ug", domain:"chconline.org",dynamic: true}
 		<a class="skip-link screen-reader-text focusable" href="#main"><?php _e( '&darr; Skip to Main Content', 'responsive' ); ?></a>
 <div class="header-emergency-phone"><img src="/assets/phone-icon-red.png" width="25"
  height="25" alt="Emergency Phone Numbers" /><strong>24-hr Crisis Lines: 855.278.4204 (Santa Clara) | 650.579.0350 (San Mateo) | 415.781.0500 (San Francisco) | 800.273.8255 or Text BAY to 741-741 (National)</strong></div>
-<!-- <a href="https://goo.gl/5tdXVV"><p class="announcement-line1">10th Annual EdRev Expo 2018</p><p class="announcement-line2">Register Free Now &raquo;</p></a> -->
-<!--<a href="http://www.chconline.org/help/"><p class="announcement-line1">In the wake of all the upsetting daily news,<br /> please remember CHC is here for you and your family.</p><p class="announcement-line2">help@chconline.org or 650.688.3625</p></a>-->
-<!--	<a href="https://www.chconline.org/help/?utm_source=Promo%20Banner&utm_content=NotAlone&utm_medium=Everyday&utm_campaign=Everyday"><p class="announcement-line1">You are not alone.<br />Please remember, CHC is here for you and your family.</p><p class="announcement-line2">help@chconline.org or 650.688.3625</p></a> -->
+<!-- <a href="https://www.chconline.org/chc-receives-community-partnership-award-from-stanford-university/"><p class="announcement-line1">CHC Honored with the 2019 Stanford Partnership Award</p><p class="announcement-line2">Read more</p></a> -->
+<!-- <a href="/closure-resources"><p class="announcement-line1">Help Resources & Presidents Day Holiday Staffing</p><p class="announcement-line2">help@chconline.org or 650.688.3660</p></a> -->
+<a class="background-hover-reverse" href="https://www.chconline.org/career-open-house"><p class="announcement-line1">Join us at CHC's Career Open House</p><p class="announcement-line2">RSVP Now or Learn More</p></a>
+<!-- <a href="https://goo.gl/uoSQuZ"><p class="announcement-line1">Holiday Closure and Help Resources</p><p class="announcement-line2">help@chconline.org or 650.617.3896</p></a>-->
+	<!--<a href="https://goo.gl/XHAKbB"><p class="announcement-line1">In the wake of all the upsetting daily news,<br /> please remember CHC is here for you and your family.</p><p class="announcement-line2">help@chconline.org or 650.688.3625</p></a>-->
+<!-- <a href="https://www.chconline.org/help/?utm_source=Promo%20Banner&utm_content=Not%20Alone&utm_medium=Everyday&utm_campaign=Everyday"><p class="announcement-line1">You are not alone.<br />Please remember, CHC is here for you and your family.</p><p class="announcement-line2">help@chconline.org or 650.688.3625</p></a> -->
 <!-- <a href="https://goo.gl/D64qWL"><p class="announcement-line1">Intensive Outpatient Program for High School Teens</p><p class="announcement-line2">Open Now. Learn more &raquo;</p>
 </a> -->
 </div>
@@ -180,15 +176,15 @@ _atrk_opts = { atrk_acct:"o2zxr1DTcA20Ug", domain:"chconline.org",dynamic: true}
 
 
 		<?php responsive_in_header(); // header hook ?>
-
-			<div id="logo">
-				<a href="/"><img src="/wp-content/uploads/2017/09/CHC_logo_web-slogan2017.png" alt="<?php bloginfo( 'name' ); ?>"/></a>
+			<!-- <div id="logo">
+				<a href="<?php echo home_url( '/' ); ?>"><img src="/wp-content/uploads/2018/06/CHC_SAFE_logo_web-slogan2018.png" alt="<?php bloginfo( 'name' ); ?>"/></a>
 
 			</div>
 			<div id="logo_mobile">
-				<a href="/"><img src="/wp-content/uploads/2017/09/CHC_logo_web-slogan2017-mobile.png" alt="<?php bloginfo( 'name' ); ?>"/></a>
+				<a href="<?php echo home_url( '/' ); ?>"><img src="/wp-content/uploads/2018/06/CHC_SAFE_logo_web-slogan2018-mobile.png" alt="<?php bloginfo( 'name' ); ?>"/></a>
 
-			</div>
+			</div>-->
+
 <!-- end of #logo -->
 
 		<?php get_sidebar( 'top' ); ?>
@@ -236,3 +232,14 @@ _atrk_opts = { atrk_acct:"o2zxr1DTcA20Ug", domain:"chconline.org",dynamic: true}
 
 </div><!-- end of #header_wrapper -->
 	</div><!-- end of #header -->
+
+	<div class="container">
+			<div id="logo">
+				<a href="<?php echo home_url( '/' ); ?>"><img src="/wp-content/uploads/2017/09/CHC_logo_web-slogan2017.png" alt="<?php bloginfo( 'name' ); ?>"/></a>
+
+			</div>
+			<div id="logo_mobile">
+				<a href="<?php echo home_url( '/' ); ?>"><img src="/wp-content/uploads/2017/09/CHC_logo_web-slogan2017-mobile.png" alt="<?php bloginfo( 'name' ); ?>"/></a>
+
+			</div>
+			</div>
